@@ -22,7 +22,7 @@ You must have:
 
 Versions supported:
 - Jekyll 3+
-- Ruby 2+
+- Ruby 2.1+
 
 ### Installation
 
