@@ -2,6 +2,8 @@
 
 # jekyll-gitlab-letsencrypt
 
+![img](doc/image.png)
+
 This plugin automagically does 90% of the letsencrypt process for your gitlab-hosted jekyll blog.
 
 - *(automatic)* It registers your email to the letsencrypt server
