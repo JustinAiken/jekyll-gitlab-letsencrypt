@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://acme-v01.api.letsencrypt.org/acme/new-reg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Acme::Client v0.5.0 (https://github.com/unixcharles/acme-client)
+  response:
+    status:
+      code: 405
+      message:
+    headers:
+      server:
+      - nginx
+      content-type:
+      - application/problem+json
+      content-length:
+      - '91'
+      allow:
+      - POST
+      boulder-request-id:
+      - P0WGSrm70EcocVsP1j3siIu6TLpjerjua1VC8l-HXdQ
+      replay-nonce:
+      - DRkuNB_xplmzR9So-a9wHF4eQeyA80hnMDkVcsV-ZpI
+      expires:
+      - Tue, 07 Feb 2017 22:54:47 GMT
+      cache-control:
+      - max-age=0, no-cache, no-store
+      pragma:
+      - no-cache
+      date:
+      - Tue, 07 Feb 2017 22:54:47 GMT
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 22:54:47 GMT
+- request:
+    method: post
+    uri: https://acme-v01.api.letsencrypt.org/acme/new-reg
+    body:
+      encoding: UTF-8
+      string: '{"protected":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp3ayI6eyJlIjoiQVFBQiIsImt0eSI6IlJTQSIsIm4iOiI2aFJlSEpISG12TW1HdFJGMFQtUEdBSW54Yk1OVHZ2VGhPU2cwdmFSYzNEeGdrYnRPWU9fLUllQjV0UmRfSEk0eEE2NzBJVUk2VXRFaVRKZW92T3ctbWNTVlhuc1h0NzhiWXJ5dXNvVlNsY0RNVVhEdWloeDQyQ0x6TDV4VVlwS3Vaa1piUUZuaXZkeWhKZkFiTkF0SHFEZHdZZGQzMHFKMTlTTkQwekN1T1NvTWoyTzFVa2EzbmRGNmh0UDhxRFRCeDkybWkzQXhGWERBbnhWUzhYakRLTEtYVXlOdmJBY2hOZmtxNW9CTGlkYVRCX09sc3V6OWcxVDNub1dQa0JHVGlHNVh5LVlZMUNOQTFtWnFqV1BYYlh1aDczMS1oYllOT2FBVmZfeXQ5Nnk4TzZxcGJ1eWppb2tmQjF5SEg5WDlUeDBLZzZBRHFjX1BleVZHNG15a3ZUTlNXVUp2dzNGdjhPNVRLRkZfdWp0N0NoNEY1OFBReWQ4WmNvTEtQcnZtRmY5N2VFaFpWenV3VDBYN1hnVGhBa3RxM1BzWUZRa3YzdjVyNmw1UWY4b2s5eG1xaVFRYlNteGxNc0pFZFIyT3RocU5UcWpma3NWTEFmdmxlY1ZfbXAyYmlBNldUTU5abWszNnhjQnR3a0hzeEpCaWZJYkVRRzMxdzNLUnZFRjJCT21kNE55ZUJSQl9Ub3dWNEs2eExZYzh3cGVoZ2Rzb0w5T1ZQdGtxdnNyN1JMM3lpczM2TkpjQlAwWGV6aUE3SVFuSE1vZlBPWVFVWjJWalpIV2hNLWROMzRuUzNNYkdfVmdDblZlWnRXNWhxS1h5LWtFRzlMME5rYndYRUplcFBSOGxxeHowTG9uSnN2bmxkd3J1TzNOam92OU01OEFMdkJnYUNaMi1UOCJ9LCJub25jZSI6IkRSa3VOQl94cGxtelI5U28tYTl3SEY0ZVFleUE4MGhuTURrVmNzVi1acEkifQ","payload":"eyJyZXNvdXJjZSI6Im5ldy1yZWciLCJjb250YWN0IjpbIm1haWx0bzpleGFtcGxlQGV4YW1wbGUuY29tIl19","signature":"NSM6qWiO-CNOhMIJT0f2_XefEmSHK32h44Jr1Z7ubID1B_kr9sONUrL4Fd3eD1v3y2VY5eCm-nJtzlLQOro_5o930AWRSQrc9A-TM6jQHtgHu9Q8ocwoC8s1M_2GEh9dLx4WV1_VQFAzBItu1zQYpFqEf8LEfvz9exGwHj0w2Rn2SvrwBRfAiwvQGWFmE1iqNnZTTbkEUmlyLWea_Z1sOx8y4o7eDyxhlF4LomBBZiK81CHB-rIpgrMRqFUz0U5gGSCry4wLOVL3GAYW17Zxl0X8yowdCoxg_v5TgcoeagesxNbqCunm9GxD4xcbM50ZQGXhROtaNlQ7rwTJ-saGOTo790QbSxnRTIec7P8LMvesb-gXVcjYvIH7pojHgLLqLfb3jVy2OFwdynIXwTKCs93myRvggQTPlvQ-H-SGa2qRkCVH4dj8Jz8WCqqaqL0d9nMRIXrvSM7tlxz66EOxaexZ0yedJ5Vtq-6bEGcd6lS3ARqKQBfOsxKUp8xp6LbiWN0UUd72f6EIreOvQHSpcWZ7OZo7P5x0zcUw_9l8AkNmH-MqGQ43R83xPIiFtrRL8q0nASqotGSeiAIvD2sZkrULIllB4FShhCxwIivc4G74iz0WxicBPTdr3BoFzLpunwNhYZpfZLW0nvwshRstRGp9JNMG_DVmQYr1o3695xs"}'
+    headers:
+      User-Agent:
+      - Acme::Client v0.5.0 (https://github.com/unixcharles/acme-client)
+  response:
+    status:
+      code: 201
+      message:
+    headers:
+      server:
+      - nginx
+      content-type:
+      - application/json
+      content-length:
+      - '919'
+      boulder-request-id:
+      - WvlyL2rrgNQuTnKy2uhgJgtgO9yoCNcvat7oar0UKJ0
+      boulder-requester:
+      - '9310231'
+      link:
+      - <https://acme-v01.api.letsencrypt.org/acme/new-authz>;rel="next", <https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf>;rel="terms-of-service"
+      location:
+      - https://acme-v01.api.letsencrypt.org/acme/reg/9310231
+      replay-nonce:
+      - 3_eWVs3wGeRlP9tUy69zBNCYqA_m-NbIOda64LxQlUI
+      x-frame-options:
+      - DENY
+      strict-transport-security:
+      - max-age=604800
+      expires:
+      - Tue, 07 Feb 2017 22:54:48 GMT
+      cache-control:
+      - max-age=0, no-cache, no-store
+      pragma:
+      - no-cache
+      date:
+      - Tue, 07 Feb 2017 22:54:48 GMT
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 9310231,
+          "key": {
+            "kty": "RSA",
+            "n": "6hReHJHHmvMmGtRF0T-PGAInxbMNTvvThOSg0vaRc3DxgkbtOYO_-IeB5tRd_HI4xA670IUI6UtEiTJeovOw-mcSVXnsXt78bYryusoVSlcDMUXDuihx42CLzL5xUYpKuZkZbQFnivdyhJfAbNAtHqDdwYdd30qJ19SND0zCuOSoMj2O1Uka3ndF6htP8qDTBx92mi3AxFXDAnxVS8XjDKLKXUyNvbAchNfkq5oBLidaTB_Olsuz9g1T3noWPkBGTiG5Xy-YY1CNA1mZqjWPXbXuh731-hbYNOaAVf_yt96y8O6qpbuyjiokfB1yHH9X9Tx0Kg6ADqc_PeyVG4mykvTNSWUJvw3Fv8O5TKFF_ujt7Ch4F58PQyd8ZcoLKPrvmFf97eEhZVzuwT0X7XgThAktq3PsYFQkv3v5r6l5Qf8ok9xmqiQQbSmxlMsJEdR2OthqNTqjfksVLAfvlecV_mp2biA6WTMNZmk36xcBtwkHsxJBifIbEQG31w3KRvEF2BOmd4NyeBRB_TowV4K6xLYc8wpehgdsoL9OVPtkqvsr7RL3yis36NJcBP0XeziA7IQnHMofPOYQUZ2VjZHWhM-dN34nS3MbG_VgCnVeZtW5hqKXy-kEG9L0NkbwXEJepPR8lqxz0LonJsvnldwruO3Njov9M58ALvBgaCZ2-T8",
+            "e": "AQAB"
+          },
+          "contact": [
+            "mailto:example@example.com"
+          ],
+          "initialIp": "192.64.23.87",
+          "createdAt": "2017-02-07T22:54:48.423630333Z",
+          "Status": "valid"
+        }
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 22:54:48 GMT
+- request:
+    method: post
+    uri: https://acme-v01.api.letsencrypt.org/acme/reg/9310231
+    body:
+      encoding: UTF-8
+      string: '{"protected":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp3ayI6eyJlIjoiQVFBQiIsImt0eSI6IlJTQSIsIm4iOiI2aFJlSEpISG12TW1HdFJGMFQtUEdBSW54Yk1OVHZ2VGhPU2cwdmFSYzNEeGdrYnRPWU9fLUllQjV0UmRfSEk0eEE2NzBJVUk2VXRFaVRKZW92T3ctbWNTVlhuc1h0NzhiWXJ5dXNvVlNsY0RNVVhEdWloeDQyQ0x6TDV4VVlwS3Vaa1piUUZuaXZkeWhKZkFiTkF0SHFEZHdZZGQzMHFKMTlTTkQwekN1T1NvTWoyTzFVa2EzbmRGNmh0UDhxRFRCeDkybWkzQXhGWERBbnhWUzhYakRLTEtYVXlOdmJBY2hOZmtxNW9CTGlkYVRCX09sc3V6OWcxVDNub1dQa0JHVGlHNVh5LVlZMUNOQTFtWnFqV1BYYlh1aDczMS1oYllOT2FBVmZfeXQ5Nnk4TzZxcGJ1eWppb2tmQjF5SEg5WDlUeDBLZzZBRHFjX1BleVZHNG15a3ZUTlNXVUp2dzNGdjhPNVRLRkZfdWp0N0NoNEY1OFBReWQ4WmNvTEtQcnZtRmY5N2VFaFpWenV3VDBYN1hnVGhBa3RxM1BzWUZRa3YzdjVyNmw1UWY4b2s5eG1xaVFRYlNteGxNc0pFZFIyT3RocU5UcWpma3NWTEFmdmxlY1ZfbXAyYmlBNldUTU5abWszNnhjQnR3a0hzeEpCaWZJYkVRRzMxdzNLUnZFRjJCT21kNE55ZUJSQl9Ub3dWNEs2eExZYzh3cGVoZ2Rzb0w5T1ZQdGtxdnNyN1JMM3lpczM2TkpjQlAwWGV6aUE3SVFuSE1vZlBPWVFVWjJWalpIV2hNLWROMzRuUzNNYkdfVmdDblZlWnRXNWhxS1h5LWtFRzlMME5rYndYRUplcFBSOGxxeHowTG9uSnN2bmxkd3J1TzNOam92OU01OEFMdkJnYUNaMi1UOCJ9LCJub25jZSI6IjNfZVdWczN3R2VSbFA5dFV5Njl6Qk5DWXFBX20tTmJJT2RhNjRMeFFsVUkifQ","payload":"eyJyZXNvdXJjZSI6InJlZyIsImFncmVlbWVudCI6Imh0dHBzOi8vbGV0c2VuY3J5cHQub3JnL2RvY3VtZW50cy9MRS1TQS12MS4xLjEtQXVndXN0LTEtMjAxNi5wZGYifQ","signature":"5egGd0zvyqgLKd_R5bKeCTybJd3GTP3YTypdfW0OVCPMyfF3ZxGEsADD_dfKD76cA9uUvyEM5RHbIa-8OQk05MjpitNDEH0_byDupaRSq3durOx6fKa5yYIYXgu4YWAwe6nfS6Pyt6ILWkULI3S5m1kG6ct_NLdPl3ekBghVpYOGe51mpgFuhszvtweNXQiskUqLNajt3eS3OxG0Q36D-hwdWzeo4wzxB9xS9tnx5H9A-y_d6EJTqApbGhTqW6EI63t4v54i_CZAXICNBKjfDCsk6L2ife9CW1QQl5PPG3niAdhvcPPajemQY8_DEkv70h9B-rJDceWMnnxp4rwQ-wpunWC8A3YJ7_wxI0QuhGtsmj9L_DSmUmpl9AA5-iW1ECR7t8TPssYiAOgqtAVMn6u_MAjiAAgCrJQcCqvDJTAt0x5KiAKS0qfwqC7lbseXYAPdx-zKnD7MCHbjYi4-_C668DYpGBnJZB8tV-sdQ62_eDM1Og78PXKZTBj_3m179XrrKnjIEndbsSrA3BLkahjDPz3yUYWlpd8-H5Umz32K1cX3KGzw7byAwkOvbYU3hLRn2H4TwOeoEVTnohey6O71fEvQEZ6WzNNp2Z1BtIQK1xmdlpRX3FIzPpdUeG97LBim3_9_ir7n6a_O-ovGeMPlfv9Zxub8d4JHTPgfXM8"}'
+    headers:
+      User-Agent:
+      - Acme::Client v0.5.0 (https://github.com/unixcharles/acme-client)
+  response:
+    status:
+      code: 202
+      message:
+    headers:
+      server:
+      - nginx
+      content-type:
+      - application/json
+      content-length:
+      - '992'
+      boulder-request-id:
+      - 5RoAXBjUweXg3H9mRhCMEjg5_njPgd1x_uHKeYHT0jM
+      boulder-requester:
+      - '9310231'
+      link:
+      - <https://acme-v01.api.letsencrypt.org/acme/new-authz>;rel="next", <https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf>;rel="terms-of-service"
+      replay-nonce:
+      - Ab_rP6-D9CkxMG2AoH5jx1xPxqf13dBT4-b3MBqhEM8
+      expires:
+      - Tue, 07 Feb 2017 22:54:48 GMT
+      cache-control:
+      - max-age=0, no-cache, no-store
+      pragma:
+      - no-cache
+      date:
+      - Tue, 07 Feb 2017 22:54:48 GMT
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": 9310231,
+          "key": {
+            "kty": "RSA",
+            "n": "6hReHJHHmvMmGtRF0T-PGAInxbMNTvvThOSg0vaRc3DxgkbtOYO_-IeB5tRd_HI4xA670IUI6UtEiTJeovOw-mcSVXnsXt78bYryusoVSlcDMUXDuihx42CLzL5xUYpKuZkZbQFnivdyhJfAbNAtHqDdwYdd30qJ19SND0zCuOSoMj2O1Uka3ndF6htP8qDTBx92mi3AxFXDAnxVS8XjDKLKXUyNvbAchNfkq5oBLidaTB_Olsuz9g1T3noWPkBGTiG5Xy-YY1CNA1mZqjWPXbXuh731-hbYNOaAVf_yt96y8O6qpbuyjiokfB1yHH9X9Tx0Kg6ADqc_PeyVG4mykvTNSWUJvw3Fv8O5TKFF_ujt7Ch4F58PQyd8ZcoLKPrvmFf97eEhZVzuwT0X7XgThAktq3PsYFQkv3v5r6l5Qf8ok9xmqiQQbSmxlMsJEdR2OthqNTqjfksVLAfvlecV_mp2biA6WTMNZmk36xcBtwkHsxJBifIbEQG31w3KRvEF2BOmd4NyeBRB_TowV4K6xLYc8wpehgdsoL9OVPtkqvsr7RL3yis36NJcBP0XeziA7IQnHMofPOYQUZ2VjZHWhM-dN34nS3MbG_VgCnVeZtW5hqKXy-kEG9L0NkbwXEJepPR8lqxz0LonJsvnldwruO3Njov9M58ALvBgaCZ2-T8",
+            "e": "AQAB"
+          },
+          "contact": [
+            "mailto:example@example.com"
+          ],
+          "agreement": "https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf",
+          "initialIp": "192.64.23.87",
+          "createdAt": "2017-02-07T22:54:48Z",
+          "Status": "valid"
+        }
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 22:54:48 GMT
+recorded_with: VCR 3.0.3

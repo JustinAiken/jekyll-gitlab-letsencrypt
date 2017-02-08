@@ -1,0 +1,242 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.com/api/v3/projects/gitlab_user%2fgitlab_repo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      PRIVATE-TOKEN:
+      - SECRET_TOKEN
+      User-Agent:
+      - Faraday v0.11.0SE
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 07 Feb 2017 23:31:52 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '1529'
+      connection:
+      - close
+      cache-control:
+      - max-age=0, private, must-revalidate
+      etag:
+      - W/"0e670d91c729a963bfeb10c0f98c3cfe"
+      vary:
+      - Origin
+      x-request-id:
+      - a61b7806-5d35-4eee-bb5e-e726fcd2fb81
+      x-runtime:
+      - '0.303968'
+      content-security-policy-report-only:
+      - object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' piwik.gitlab.com
+        https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src
+        'self' 'unsafe-inline'; img-src * data:; frame-src 'self' https://www.google.com/recaptcha/;
+        frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
+    body:
+      encoding: UTF-8
+      string: '{"id":1234}'
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 23:31:52 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v3/projects/1234/repository/branches
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      PRIVATE-TOKEN:
+      - SECRET_TOKEN
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 07 Feb 2017 23:31:52 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '1542'
+      connection:
+      - close
+      cache-control:
+      - max-age=0, private, must-revalidate
+      etag:
+      - W/"b5db4742e03745caf391836215995f14"
+      vary:
+      - Origin
+      x-request-id:
+      - c003a026-a337-4f4b-b43f-d9851d011c5e
+      x-runtime:
+      - '0.266958'
+      content-security-policy-report-only:
+      - object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' piwik.gitlab.com
+        https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src
+        'self' 'unsafe-inline'; img-src * data:; frame-src 'self' https://www.google.com/recaptcha/;
+        frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
+    body:
+      encoding: UTF-8
+      string: '[{"name":"master"}]'
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 23:31:52 GMT
+- request:
+    method: post
+    uri: https://gitlab.com/api/v3/projects/1234/repository/branches
+    body:
+      encoding: UTF-8
+      string: '{"branch_name":"test_branch","ref":"master"}'
+    headers:
+      Content-Type:
+      - application/json
+      PRIVATE-TOKEN:
+      - SECRET_TOKEN
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 201
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 07 Feb 2017 23:31:54 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '510'
+      connection:
+      - close
+      cache-control:
+      - max-age=0, private, must-revalidate
+      etag:
+      - W/"774a285a1f374376b278a61d962fc424"
+      vary:
+      - Origin
+      x-request-id:
+      - 8b6bad5f-a6ef-4ceb-9c6f-605c9715f994
+      x-runtime:
+      - '0.868943'
+      content-security-policy-report-only:
+      - object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' piwik.gitlab.com
+        https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src
+        'self' 'unsafe-inline'; img-src * data:; frame-src 'self' https://www.google.com/recaptcha/;
+        frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
+    body:
+      encoding: UTF-8
+      string: '{"name":"test_branch"}'
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 23:31:54 GMT
+- request:
+    method: get
+    uri: https://gitlab.com/api/v3/projects/1234/repository/files?file_path=test_file.html&ref=test_branch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      PRIVATE-TOKEN:
+      - SECRET_TOKEN
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 404
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 07 Feb 2017 23:31:55 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '32'
+      connection:
+      - close
+      cache-control:
+      - no-cache
+      vary:
+      - Origin
+      x-request-id:
+      - 880c6ec2-7085-4ca4-978d-da8c80318623
+      x-runtime:
+      - '0.070913'
+      content-security-policy-report-only:
+      - object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' piwik.gitlab.com
+        https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src
+        'self' 'unsafe-inline'; img-src * data:; frame-src 'self' https://www.google.com/recaptcha/;
+        frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
+    body:
+      encoding: UTF-8
+      string: '{"message":"404 File Not Found"}'
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 23:31:55 GMT
+- request:
+    method: post
+    uri: https://gitlab.com/api/v3/projects/1234/repository/files
+    body:
+      encoding: UTF-8
+      string: '{"file_path":"test_file.html","commit_message":"Automated Let''s Encrypt
+        renewal","branch_name":"test_branch","content":"<CONTENT>"}'
+    headers:
+      Content-Type:
+      - application/json
+      PRIVATE-TOKEN:
+      - SECRET_TOKEN
+      User-Agent:
+      - Faraday v0.11.0
+  response:
+    status:
+      code: 201
+      message:
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 07 Feb 2017 23:31:57 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '58'
+      connection:
+      - close
+      cache-control:
+      - max-age=0, private, must-revalidate
+      etag:
+      - W/"03582b5874b2395818c11423a79d16ca"
+      vary:
+      - Origin
+      x-request-id:
+      - ecddb838-72e4-453b-a786-75efcd641955
+      x-runtime:
+      - '1.434225'
+      content-security-policy-report-only:
+      - object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' piwik.gitlab.com
+        https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src
+        'self' 'unsafe-inline'; img-src * data:; frame-src 'self' https://www.google.com/recaptcha/;
+        frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
+    body:
+      encoding: UTF-8
+      string: '{"file_path":"test_file.html","branch_name":"test_branch"}'
+    http_version:
+  recorded_at: Tue, 07 Feb 2017 23:31:57 GMT
+recorded_with: VCR 3.0.3
