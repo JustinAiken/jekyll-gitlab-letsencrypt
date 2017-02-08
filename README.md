@@ -1,3 +1,5 @@
+[![Build Status](http://img.shields.io/travis/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](http://travis-ci.org/JustinAiken/jekyll-gitlab-letsencrypt) [![Coveralls branch](http://img.shields.io/coveralls/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](https://coveralls.io/r/JustinAiken/jjekyll-gitlab-letsencrypt?branch=master) [![Code Climate](http://img.shields.io/codeclimate/github/JustinAiken/jekyll-gitlab-letsencrypt.svg)](https://codeclimate.com/github/JustinAiken/jekyll-gitlab-letsencrypt)
+
 # jekyll-gitlab-letsencrypt
 
 This plugin automagically does 90% of the letsencrypt process for your gitlab-hosted jekyll blog.
