@@ -1,4 +1,4 @@
-[![Build Status](http://img.shields.io/travis/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](http://travis-ci.org/JustinAiken/jekyll-gitlab-letsencrypt) [![Coveralls branch](http://img.shields.io/coveralls/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](https://coveralls.io/r/JustinAiken/jjekyll-gitlab-letsencrypt?branch=master) [![Code Climate](http://img.shields.io/codeclimate/github/JustinAiken/jekyll-gitlab-letsencrypt.svg)](https://codeclimate.com/github/JustinAiken/jekyll-gitlab-letsencrypt)
+[![Gem Version](http://img.shields.io/gem/v/jekyll-gitlab-letsencrypt.svg)](https://rubygems.org/gems/jekyll-gitlab-letsencrypt) [![Build Status](http://img.shields.io/travis/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](http://travis-ci.org/JustinAiken/jekyll-gitlab-letsencrypt) [![Coveralls branch](http://img.shields.io/coveralls/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](https://coveralls.io/r/JustinAiken/jjekyll-gitlab-letsencrypt?branch=master) [![Code Climate](http://img.shields.io/codeclimate/github/JustinAiken/jekyll-gitlab-letsencrypt.svg)](https://codeclimate.com/github/JustinAiken/jekyll-gitlab-letsencrypt)
 
 # jekyll-gitlab-letsencrypt
 
