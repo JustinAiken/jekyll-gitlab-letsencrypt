@@ -29,4 +29,19 @@ describe Jekyll::Gitlab::Letsencrypt::Process do
       pending
     end
   end
+
+  describe '#challenge_url' do
+    subject         { process.send :challenge_url }
+    let(:challenge) { double 'challenge', filename: 'foo' }
+    before          { allow(client).to receive(:challenge).and_return challenge }
+
+    context "by default" do
+      it { should match /http\:/ }
+    end
+
+    context 'if scheme is overriden' do
+      before { allow(Jekyll::Gitlab::Letsencrypt::Configuration).to receive(:scheme).and_return 'https' }
+      it     { should match /https\:/ }
+    end
+  end
 end
