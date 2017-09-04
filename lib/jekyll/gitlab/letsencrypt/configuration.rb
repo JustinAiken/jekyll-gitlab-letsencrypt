@@ -9,6 +9,7 @@ module Jekyll
         DEFAULT_LAYOUT          = 'null'
         DEFAULT_INITIAL_DELAY   = 120
         DEFAULT_DELAY_TIME      = 15
+        DEFAULT_PROTOCOL        = 'http'
 
         REQUIRED_KEYS = %w{gitlab_repo personal_access_token email domain}
 
@@ -64,6 +65,10 @@ module Jekyll
 
           def delay_time
             jekyll_config['delay_time'] || DEFAULT_DELAY_TIME
+          end
+
+          def protocol
+            jekyll_config['protocol'] || DEFAULT_PROTOCOL
           end
 
           def reset!
