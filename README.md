@@ -71,7 +71,7 @@ gitlab-letsencrypt:
   endpoint:  'https://somewhere' # if you're doing the ACME thing outside of letsencrypt
   branch:    'master'            # Defaults to master, but you can use a different branch
   layout:    'null'              # Layout to use for challenge file - defaults to null, but you can change if needed
-  protocol:  'https'             # Protocol to use for challenge request; default http
+  scheme:    'https'             # Scheme to use for challenge request; default http
 ```
 
 ### Running

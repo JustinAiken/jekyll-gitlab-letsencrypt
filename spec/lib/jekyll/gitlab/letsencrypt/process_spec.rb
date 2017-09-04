@@ -39,8 +39,8 @@ describe Jekyll::Gitlab::Letsencrypt::Process do
       it { should match /http\:/ }
     end
 
-    context 'if protocol is overriden' do
-      before { allow(Jekyll::Gitlab::Letsencrypt::Configuration).to receive(:protocol).and_return 'https' }
+    context 'if scheme is overriden' do
+      before { allow(Jekyll::Gitlab::Letsencrypt::Configuration).to receive(:scheme).and_return 'https' }
       it     { should match /https\:/ }
     end
   end
