@@ -11,12 +11,12 @@ module Jekyll
         DEFAULT_DELAY_TIME      = 15
         DEFAULT_SCHEME          = 'http'
 
-        REQUIRED_KEYS = %w{gitlab_repo personal_access_token email domain}
+        REQUIRED_KEYS = %w{gitlab_repo email domain}
 
         class << self
 
           def valid?
-            REQUIRED_KEYS.all? { |key| jekyll_config.has_key? key }
+            REQUIRED_KEYS.all? { |key| jekyll_config.has_key? key } && personal_access_token
           end
 
           def endpoint
@@ -40,7 +40,7 @@ module Jekyll
           end
 
           def personal_access_token
-            jekyll_config['personal_access_token']
+            ENV['GITLAB_TOKEN'] || jekyll_config['personal_access_token']
           end
 
           def email
