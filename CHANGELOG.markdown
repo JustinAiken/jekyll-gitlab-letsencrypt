@@ -1,3 +1,7 @@
+# 0.1.0
+
+- #6 - Added option to get secret gitlab token from env var
+
 # 0.0.2
 
 - #3 - Added option to specify scheme used for challenge url request
