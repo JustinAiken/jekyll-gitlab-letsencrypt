@@ -118,6 +118,14 @@ Certificate (PEM):
 ... hit save, wait a bit, and your new SSL will be live!
 ```
 
+### Alternative token usage
+
+If you don't want to put your secret gitlab token in your `_config.yml`, you can pass it as an ENV var when you run the command:
+
+```bash
+GITLAB_TOKEN="VERY_SECRET_NOT_IN_GIT_PLEASE" jekyll letsencrypt
+```
+
 # License
 
 MIT

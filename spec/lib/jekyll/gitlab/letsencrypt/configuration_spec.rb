@@ -34,6 +34,20 @@ describe Jekyll::Gitlab::Letsencrypt::Configuration do
     end
   end
 
+  describe '#personal_access_token' do
+    subject { described_class.personal_access_token }
+
+    context 'in the env var' do
+      before { stub_const 'ENV', {'GITLAB_TOKEN' => 'from_the_env'} }
+      it     { should eq 'from_the_env'}
+    end
+
+    context "from the jeykll config" do
+      let(:plugin_config) { {'personal_access_token' => 'from_config'} }
+      it                  { should eq 'from_config'}
+    end
+  end
+
   describe '#endpoint' do
     subject { described_class.endpoint }
     context "with no endpoint" do
