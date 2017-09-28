@@ -1,3 +1,5 @@
+require "active_support/core_ext/object/blank"
+
 module Jekyll
   module Gitlab
     module Letsencrypt
@@ -40,7 +42,7 @@ module Jekyll
           end
 
           def personal_access_token
-            ENV['GITLAB_TOKEN'] || jekyll_config['personal_access_token']
+            jekyll_config['personal_access_token'].presence || ENV['GITLAB_TOKEN'].presence
           end
 
           def email
