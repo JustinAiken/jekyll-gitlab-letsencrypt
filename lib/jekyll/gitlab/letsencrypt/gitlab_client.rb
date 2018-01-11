@@ -3,17 +3,14 @@ require 'faraday'
 module Jekyll
   module Gitlab
     module Letsencrypt
-      class Commiter
+      class GitlabClient
 
         attr_accessor :content
 
         delegate :filename, :personal_access_token, :gitlab_repo, :branch, to: Configuration
 
-        def initialize(content)
+        def commit!(content)
           @content = content
-        end
-
-        def commit!
           create_branch! unless branch_exists?
           commit_file!
         end
@@ -31,7 +28,7 @@ module Jekyll
 
         def commit_file!
           Jekyll.logger.info "Commiting challenge file as #{filename}"
-          connection.run_request(request_method, nil, nil, nil) do |req|
+          connection.run_request(request_method_for_commit, nil, nil, nil) do |req|
             req.url        "projects/#{repo_id}/repository/files"
             req.body = {
               file_path:      filename,
@@ -50,7 +47,7 @@ module Jekyll
           JSON.parse(response.body).any? { |json| json['name'] == branch }
         end
 
-        def request_method
+        def request_method_for_commit
           response = connection.get "projects/#{repo_id}/repository/files?ref=#{branch}&file_path=#{filename}"
           response.status == 404 ? :post : :put
         end

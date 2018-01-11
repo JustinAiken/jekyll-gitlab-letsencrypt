@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Jekyll::Gitlab::Letsencrypt::Commiter do
-  let(:commiter) { described_class.new content }
-  let(:content)  { '<CONTENT>' }
+describe Jekyll::Gitlab::Letsencrypt::GitlabClient do
+  let(:gitlab_commiter) { described_class.new  }
+  let(:content)         { '<CONTENT>' }
 
   let(:filename)              { 'test_file.html' }
   let(:personal_access_token) { 'SECRET_TOKEN' }
@@ -21,7 +21,7 @@ describe Jekyll::Gitlab::Letsencrypt::Commiter do
       expect(Jekyll.logger).to receive(:info).with "Creating branch test_branch.."
       expect(Jekyll.logger).to receive(:info).with "Commiting challenge file as test_file.html"
       expect(Jekyll.logger).to receive(:info).with "Done Commiting! Check https://gitlab.com/gitlab_user/gitlab_repo/commits/test_branch"
-      commiter.commit!
+      gitlab_commiter.commit! content
     end
   end
 end

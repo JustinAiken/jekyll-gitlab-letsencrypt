@@ -32,7 +32,7 @@ module Jekyll
 
         def commit_to_gitlab!
           Jekyll.logger.info "Pushing file to Gitlab"
-          Commiter.new(challenge_content).commit!
+          GitlabClient.new.commit!(challenge_content)
         end
 
         def wait_until_challenge_is_present
