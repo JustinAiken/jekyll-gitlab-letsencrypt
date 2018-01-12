@@ -7,12 +7,24 @@ module Jekyll
 
         attr_accessor :content
 
-        delegate :filename, :personal_access_token, :gitlab_repo, :branch, to: Configuration
+        delegate :filename, :personal_access_token, :gitlab_repo, :branch, :domain, to: Configuration
 
         def commit!(content)
           @content = content
           create_branch! unless branch_exists?
           commit_file!
+        end
+
+        def update_certificate!(certificate, key)
+          Jekyll.logger.info "Updating domain #{domain} pages setting with new certificates.."
+          response = connection.put do |req|
+            req.url "projects/#{repo_id}/pages/domains/#{domain}"
+            req.body = {
+              certificate:  certificate,
+              key:          key
+            }.to_json
+          end
+          response.success?
         end
 
         def create_branch!

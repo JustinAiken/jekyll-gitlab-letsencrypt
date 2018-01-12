@@ -25,14 +25,19 @@ module Jekyll
           wait_until_challenge_is_present
           request_verification!
           await_verification_confirmation
-          display_certificate
+          if update_gitlab_pages
+            Jekyll.logger.info "Success!"
+          else
+            Jekyll.logger.info "Updating certificate failed... manual steps:"
+            display_certificate
+          end
         end
 
       private
 
         def commit_to_gitlab!
           Jekyll.logger.info "Pushing file to Gitlab"
-          GitlabClient.new.commit!(challenge_content)
+          gitlab_client.commit!(challenge_content)
         end
 
         def wait_until_challenge_is_present
@@ -71,6 +76,10 @@ module Jekyll
             Jekyll.logger.abort_with "Challenge failed to verify" if tries >= 3
             sleep delay_time
           end
+        end
+
+        def update_gitlab_pages
+          gitlab_client.update_certificate! certificate.fullchain_to_pem, certificate.request.private_key.to_pem
         end
 
         def display_certificate
@@ -115,6 +124,10 @@ module Jekyll
             url += "/" if pretty_url?
             url
           end
+        end
+
+        def gitlab_client
+          @gitlab_client ||= GitlabClient.new
         end
 
         def challenge
