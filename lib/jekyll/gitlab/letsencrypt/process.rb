@@ -54,6 +54,9 @@ module Jekyll
         def request_verification!
           Jekyll.logger.info "Requesting verification..."
           challenge.request_verification
+        rescue ::Acme::Client::Error::BadNonce
+          Jekyll.logger.info "bad nonce! trying again.."
+          challenge.request_verification
         end
 
         def await_verification_confirmation
