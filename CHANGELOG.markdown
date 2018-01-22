@@ -1,3 +1,7 @@
+# Next
+
+- Fully automated! Use new gitlab API for the last step
+
 # 0.1.0
 
 - #6 - Added option to get secret gitlab token from env var

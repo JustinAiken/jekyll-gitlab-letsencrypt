@@ -4,15 +4,14 @@
 
 ![img](doc/image.png)
 
-This plugin automagically does 90% of the letsencrypt process for your gitlab-hosted jekyll blog.
+This plugin automagically does the entire the letsencrypt process for your gitlab-hosted jekyll blog!
 
 - *(automatic)* It registers your email to the letsencrypt server
 - *(automatic)* It generates a challenge file, and commits it directly via the gitlab API
 - *(automatic)* It sleeps until the challenge file is live on the internet
 - *(automatic)* It asks letsencrypt to verify it
 - *(automatic)* It spits out the certificate chain and private key
-- *(manual)* You have to go to the URL provided and manually copy/paste them
-  - This step must be manual since there is no API through Gitlab for this step
+- *(automatic)* It updates the gitlab pages domain settings to use the certificate
 
 ## Usage
 
@@ -93,29 +92,8 @@ Requesting verification...
 Challenge status = valid
 Challenge is valid!
 Certificate retrieved!
-Go to https://gitlab.com/gitlab_user/gitlab_repo/pages
- - If you already have an existing entry for example.com, remove it
- - Then click + New Domain and enter the following:
-
-Domain: example.com
-
-Certificate (PEM):
------BEGIN CERTIFICATE-----
-...
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-...
------END CERTIFICATE-----
-
-  Key (PEM):
------BEGIN RSA PRIVATE KEY-----
-...
------END RSA PRIVATE KEY-----
-
-
-
-
-... hit save, wait a bit, and your new SSL will be live!
+Updating domain example.com pages setting with new certificates..
+Success!
 ```
 
 ### Alternative token usage

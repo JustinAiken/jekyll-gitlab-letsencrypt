@@ -5,7 +5,7 @@ require 'jekyll/gitlab/letsencrypt/version'
 require 'jekyll/gitlab/letsencrypt/configuration'
 require 'jekyll/gitlab/letsencrypt/acme'
 require 'jekyll/gitlab/letsencrypt/process'
-require 'jekyll/gitlab/letsencrypt/committer'
+require 'jekyll/gitlab/letsencrypt/gitlab_client'
 
 module Jekyll
   module Gitlab

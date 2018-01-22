@@ -10,6 +10,7 @@ describe Jekyll::Gitlab::Letsencrypt::Process do
       allow(process).to receive :wait_until_challenge_is_present
       allow(process).to receive :request_verification!
       allow(process).to receive :await_verification_confirmation
+      allow(process).to receive :update_gitlab_pages
       allow(process).to receive :display_certificate
     end
 
@@ -19,7 +20,7 @@ describe Jekyll::Gitlab::Letsencrypt::Process do
       before { allow(client).to receive(:authorized?).and_return true }
 
       it 'bails early' do
-        expect(Jekyll).to receive_message_chain(:logger, :abort_with).with "Client is already authorized."
+        expect(Jekyll.logger).to receive(:abort_with).with("Client is already authorized.")
       end
     end
 

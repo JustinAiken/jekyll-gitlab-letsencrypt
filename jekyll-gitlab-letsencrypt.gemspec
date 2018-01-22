@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "coveralls"
 
   spec.add_dependency "activesupport", ">= 3.0.0"
-  spec.add_dependency "acme-client",   "~> 0.5.0"
+  spec.add_dependency "acme-client",   "~> 0.6"
 end

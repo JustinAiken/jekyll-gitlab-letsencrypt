@@ -31,10 +31,8 @@ describe Jekyll::Gitlab::Letsencrypt::Acme do
   end
 
   describe '#client' do
-    it 'returns a new ACME client fitted with a new private key' do
-      expect(OpenSSL::PKey::RSA).to receive(:new).with(4096).and_return :some_key
-      expect(acme.client.private_key).to eq :some_key
-      expect(acme.client.endpoint).to    eq endpoint
+    it 'returns a new ACME client' do
+      expect(acme.client.endpoint).to eq endpoint
     end
   end
 end
