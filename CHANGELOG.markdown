@@ -1,6 +1,6 @@
-# Next
+# 0.2.0
 
-- Fully automated! Use new gitlab API for the last step
+- #8 - Fully automated! Use new gitlab API for the last step
 
 # 0.1.0
 
