@@ -59,4 +59,16 @@ describe Jekyll::Gitlab::Letsencrypt::Configuration do
       it { should eq 'https://foo/'}
     end
   end
+
+  describe '#gitlab_url' do
+    subject { described_class.gitlab_url }
+    context "with no gitlab_url" do
+      it { should eq 'https://gitlab.com'}
+    end
+
+    context "with an gitlab_url" do
+      let(:plugin_config) { {'gitlab_url' => "https://gitlab"} }
+      it { should eq 'https://gitlab'}
+    end
+  end
 end

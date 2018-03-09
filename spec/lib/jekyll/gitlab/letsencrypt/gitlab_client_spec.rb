@@ -6,6 +6,7 @@ describe Jekyll::Gitlab::Letsencrypt::GitlabClient do
 
   let(:filename)              { 'test_file.html' }
   let(:personal_access_token) { 'SECRET_TOKEN' }
+  let(:gitlab_url)            { 'https://gitlab.com'}
   let(:gitlab_repo)           { 'gitlab_user/gitlab_repo' }
   let(:branch)                { 'test_branch' }
   let(:domain)                { 'example.com' }
