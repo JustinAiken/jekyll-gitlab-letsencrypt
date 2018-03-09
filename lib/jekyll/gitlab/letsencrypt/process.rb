@@ -31,6 +31,8 @@ module Jekyll
             Jekyll.logger.info "Updating certificate failed... manual steps:"
             display_certificate
           end
+
+          Jekyll.logger.info "All finished!  Don't forget to \`git pull\` in order to bring your local repo up to date with changes this plugin made."
         end
 
       private
