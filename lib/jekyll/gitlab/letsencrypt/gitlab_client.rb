@@ -7,7 +7,7 @@ module Jekyll
 
         attr_accessor :content
 
-        delegate :filename, :personal_access_token, :gitlab_repo, :branch, :domain, to: Configuration
+        delegate :filename, :personal_access_token, :gitlab_url, :gitlab_repo, :branch, :domain, to: Configuration
 
         def commit!(content)
           @content = content
@@ -49,7 +49,7 @@ module Jekyll
               content:        content
             }.to_json
           end
-          Jekyll.logger.info "Done Commiting! Check https://gitlab.com/#{gitlab_repo}/commits/#{branch}"
+          Jekyll.logger.info "Done Commiting! Check #{gitlab_url}/#{gitlab_repo}/commits/#{branch}"
         end
 
       private
@@ -73,7 +73,7 @@ module Jekyll
         end
 
         def connection
-          @connection ||= Faraday.new(url: 'https://gitlab.com/api/v3/') do |faraday|
+          @connection ||= Faraday.new(url: "#{gitlab_url}/api/v3/") do |faraday|
             faraday.adapter Faraday.default_adapter
             faraday.headers['Content-Type']  = 'application/json'
             faraday.headers['PRIVATE-TOKEN'] = personal_access_token

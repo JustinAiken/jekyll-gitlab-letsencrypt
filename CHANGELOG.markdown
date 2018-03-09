@@ -1,3 +1,7 @@
+# 0.2.1
+
+- Add custom GitLab URL setting
+
 # 0.2.0
 
 - #8 - Fully automated! Use new gitlab API for the last step

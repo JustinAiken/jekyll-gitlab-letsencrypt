@@ -67,6 +67,7 @@ gitlab-letsencrypt:
   delay_time:     15 # How long to wait between each check once it starts looking for the file
 
   # Optional settings you probably don't need:
+  gitlab_url: 'https://someurl'  # Set if you need to use a self-hosted GitLab instance
   endpoint:  'https://somewhere' # if you're doing the ACME thing outside of letsencrypt
   branch:    'master'            # Defaults to master, but you can use a different branch
   layout:    'null'              # Layout to use for challenge file - defaults to null, but you can change if needed

@@ -12,7 +12,7 @@ module Jekyll
           self.new(client).process!
         end
 
-        delegate :base_path, :gitlab_repo, :pretty_url?, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
+        delegate :base_path, :gitlab_url, :gitlab_repo, :pretty_url?, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
 
         def initialize(client)
           @client = client
@@ -86,7 +86,7 @@ module Jekyll
 
         def display_certificate
           Jekyll.logger.info "Certifcate retrieved!"
-          Jekyll.logger.info "Go to https://gitlab.com/#{gitlab_repo}/pages"
+          Jekyll.logger.info "Go to #{gitlab_url}/#{gitlab_repo}/pages"
           Jekyll.logger.info " - If you already have an existing entry for #{domain}, remove it"
           Jekyll.logger.info " - Then click + New Domain and enter the following:"
           Jekyll.logger.info ""

@@ -12,6 +12,7 @@ module Jekyll
         DEFAULT_INITIAL_DELAY   = 120
         DEFAULT_DELAY_TIME      = 15
         DEFAULT_SCHEME          = 'http'
+        DEFAULT_GITLAB_URL      = 'https://gitlab.com'
 
         REQUIRED_KEYS = %w{gitlab_repo email domain}
 
@@ -23,6 +24,10 @@ module Jekyll
 
           def endpoint
             jekyll_config['endpoint'] || DEFAULT_ENDPOINT
+          end
+
+          def gitlab_url
+            jekyll_config['gitlab_url'] || DEFAULT_GITLAB_URL
           end
 
           def gitlab_repo
