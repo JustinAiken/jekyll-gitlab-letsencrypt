@@ -12,7 +12,7 @@ module Jekyll
           self.new(client).process!
         end
 
-        delegate :base_path, :gitlab_repo, :pretty_url?, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
+        delegate :base_path, :gitlab_url, :gitlab_repo, :pretty_url?, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
 
         def initialize(client)
           @client = client
