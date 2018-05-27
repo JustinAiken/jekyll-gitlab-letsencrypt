@@ -68,6 +68,9 @@ module Jekyll
           @repo_id ||= begin
             repo_name = gitlab_repo.gsub "/", "%2f"
             response  = connection.get "projects/#{repo_name}"
+            unless response.success?
+              fail StandardError, "Failed response for projects/#{repo_name}. Please check if personall token and repo name are correct"
+            end
             JSON.parse(response.body)['id']
           end
         end
