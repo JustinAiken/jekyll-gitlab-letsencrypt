@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gitlab.com/api/v3/projects/gitlab_user%2fgitlab_repo
+    uri: https://gitlab.com/api/v4/projects/gitlab_user%2fgitlab_repo
     body:
       encoding: US-ASCII
       string: ''
@@ -50,7 +50,7 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:52 GMT
 - request:
     method: get
-    uri: https://gitlab.com/api/v3/projects/1234/repository/branches
+    uri: https://gitlab.com/api/v4/projects/1234/repository/branches
     body:
       encoding: US-ASCII
       string: ''
@@ -98,7 +98,7 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:52 GMT
 - request:
     method: post
-    uri: https://gitlab.com/api/v3/projects/1234/repository/branches
+    uri: https://gitlab.com/api/v4/projects/1234/repository/branches
     body:
       encoding: UTF-8
       string: '{"branch_name":"test_branch","ref":"master"}'
@@ -146,7 +146,7 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:54 GMT
 - request:
     method: get
-    uri: https://gitlab.com/api/v3/projects/1234/repository/files?file_path=test_file.html&ref=test_branch
+    uri: https://gitlab.com/api/v4/projects/1234/repository/files/test_file.html?ref=test_branch
     body:
       encoding: US-ASCII
       string: ''
@@ -192,10 +192,10 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:55 GMT
 - request:
     method: post
-    uri: https://gitlab.com/api/v3/projects/1234/repository/files
+    uri: https://gitlab.com/api/v3/projects/1234/repository/files/test_file.html
     body:
       encoding: UTF-8
-      string: '{"file_path":"test_file.html","commit_message":"Automated Let''s Encrypt
+      string: '{"commit_message":"Automated Let''s Encrypt
         renewal","branch_name":"test_branch","content":"<CONTENT>"}'
     headers:
       Content-Type:
