@@ -146,7 +146,7 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:54 GMT
 - request:
     method: get
-    uri: https://gitlab.com/api/v4/projects/1234/repository/files/test_file%2ehtml?ref=test_branch
+    uri: https://gitlab.com/api/v4/projects/1234/repository/files/test_file.html?ref=test_branch
     body:
       encoding: US-ASCII
       string: ''
@@ -192,7 +192,7 @@ http_interactions:
   recorded_at: Tue, 07 Feb 2017 23:31:55 GMT
 - request:
     method: post
-    uri: https://gitlab.com/api/v3/projects/1234/repository/files/test_file%2ehtml
+    uri: https://gitlab.com/api/v4/projects/1234/repository/files/test_file.html
     body:
       encoding: UTF-8
       string: '{"commit_message":"Automated Let''s Encrypt
