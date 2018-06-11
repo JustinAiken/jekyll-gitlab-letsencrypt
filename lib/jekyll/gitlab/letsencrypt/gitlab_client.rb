@@ -32,8 +32,8 @@ module Jekyll
           connection.post do |req|
             req.url  "projects/#{repo_id}/repository/branches"
             req.body = {
-              branch_name:  branch,
-              ref:          'master'
+              branch:  branch,
+              ref:     'master'
             }.to_json
           end
         end
@@ -44,7 +44,7 @@ module Jekyll
             req.url        "projects/#{repo_id}/repository/files/#{enc_filename}"
             req.body = {
               commit_message: "Automated Let's Encrypt renewal",
-              branch_name:    branch,
+              branch:         branch,
               content:        content
             }.to_json
           end

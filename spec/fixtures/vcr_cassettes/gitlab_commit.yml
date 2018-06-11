@@ -101,7 +101,7 @@ http_interactions:
     uri: https://gitlab.com/api/v4/projects/1234/repository/branches
     body:
       encoding: UTF-8
-      string: '{"branch_name":"test_branch","ref":"master"}'
+      string: '{"branch":"test_branch","ref":"master"}'
     headers:
       Content-Type:
       - application/json
@@ -196,7 +196,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"commit_message":"Automated Let''s Encrypt
-        renewal","branch_name":"test_branch","content":"<CONTENT>"}'
+        renewal","branch":"test_branch","content":"<CONTENT>"}'
     headers:
       Content-Type:
       - application/json
@@ -236,7 +236,7 @@ http_interactions:
         frame-ancestors 'none'; connect-src 'self'; report-uri https://sentry-infra.gitlap.com/api/3/csp-report/?sentry_key=a664fdde83424b43a991f25fa7c78987
     body:
       encoding: UTF-8
-      string: '{"file_path":"test_file.html","branch_name":"test_branch"}'
+      string: '{"file_path":"test_file.html","branch":"test_branch"}'
     http_version:
   recorded_at: Tue, 07 Feb 2017 23:31:57 GMT
 recorded_with: VCR 3.0.3
