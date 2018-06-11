@@ -1,3 +1,9 @@
+# 0.3.0
+
+  - #17 - Check for repo id fetch request status
+  - Update to Gitlab API V4
+    - Mostly from #18 - thanks @ethernet-zero !
+
 # 0.2.1
 
 - Add custom GitLab URL setting
