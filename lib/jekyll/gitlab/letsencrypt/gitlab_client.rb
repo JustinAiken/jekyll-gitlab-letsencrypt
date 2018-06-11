@@ -40,7 +40,6 @@ module Jekyll
 
         def commit_file!
           Jekyll.logger.info "Commiting challenge file as #{filename}"
-          enc_filename = filename.gsub "/", "%2f"
           connection.run_request(request_method_for_commit, nil, nil, nil) do |req|
             req.url        "projects/#{repo_id}/repository/files/#{enc_filename}"
             req.body = {
@@ -60,9 +59,12 @@ module Jekyll
         end
 
         def request_method_for_commit
-          enc_filename = filename.gsub "/", "%2f"
           response = connection.get "projects/#{repo_id}/repository/files/#{enc_filename}?ref=#{branch}"
           response.status == 404 ? :post : :put
+        end
+
+        def enc_filename
+          filename.gsub "/", "%2f"
         end
 
         def repo_id
