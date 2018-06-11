@@ -40,10 +40,10 @@ module Jekyll
 
         def commit_file!
           Jekyll.logger.info "Commiting challenge file as #{filename}"
+          enc_filename = filename.gsub "/", "%2f"
           connection.run_request(request_method_for_commit, nil, nil, nil) do |req|
-            req.url        "projects/#{repo_id}/repository/files"
+            req.url        "projects/#{repo_id}/repository/files/#{enc_filename}"
             req.body = {
-              file_path:      filename,
               commit_message: "Automated Let's Encrypt renewal",
               branch_name:    branch,
               content:        content
@@ -60,7 +60,8 @@ module Jekyll
         end
 
         def request_method_for_commit
-          response = connection.get "projects/#{repo_id}/repository/files?ref=#{branch}&file_path=#{filename}"
+          enc_filename = filename.gsub "/", "%2f"
+          response = connection.get "projects/#{repo_id}/repository/files/#{enc_filename}?ref=#{branch}"
           response.status == 404 ? :post : :put
         end
 
@@ -76,7 +77,7 @@ module Jekyll
         end
 
         def connection
-          @connection ||= Faraday.new(url: "#{gitlab_url}/api/v3/") do |faraday|
+          @connection ||= Faraday.new(url: "#{gitlab_url}/api/v4/") do |faraday|
             faraday.adapter Faraday.default_adapter
             faraday.headers['Content-Type']  = 'application/json'
             faraday.headers['PRIVATE-TOKEN'] = personal_access_token
