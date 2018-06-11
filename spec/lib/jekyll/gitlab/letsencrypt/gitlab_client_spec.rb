@@ -54,4 +54,29 @@ describe Jekyll::Gitlab::Letsencrypt::GitlabClient do
       end
     end
   end
+
+  describe "#repo_id" do
+    let(:mock_connection) { double Faraday::Connection, get: response}
+
+    before do
+      allow(gitlab_client).to receive(:connection).and_return mock_connection
+    end
+
+    context "unsuccessful" do
+      let(:response) { double Faraday::Response, success?: false }
+
+      it "raises" do
+          expect { gitlab_client.send(:repo_id) }
+            .to raise_error(StandardError, /Failed response for projects.*/)
+      end
+    end
+
+    context 'successful' do
+      let(:response) { double Faraday::Response, success?: true, body: '{ "id": 123 }' }
+
+      it "returns repo_id" do
+          expect(gitlab_client.send(:repo_id)).to eq 123
+      end
+    end
+  end
 end
