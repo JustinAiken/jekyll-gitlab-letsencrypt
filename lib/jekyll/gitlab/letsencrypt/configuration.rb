@@ -42,6 +42,10 @@ module Jekyll
             !!jekyll_config['pretty_url']
           end
 
+          def append_html?
+            !!jekyll_config['append_html']
+          end
+
           def layout
             jekyll_config['layout'] || DEFAULT_LAYOUT
           end
