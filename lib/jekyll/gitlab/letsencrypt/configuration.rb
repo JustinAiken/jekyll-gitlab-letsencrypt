@@ -13,6 +13,7 @@ module Jekyll
         DEFAULT_DELAY_TIME      = 15
         DEFAULT_SCHEME          = 'http'
         DEFAULT_GITLAB_URL      = 'https://gitlab.com'
+	DEFAULT_COMMIT_MESSAGE  = "Automated Let's Encrypt renewal"
 
         REQUIRED_KEYS = %w{gitlab_repo email domain}
 
@@ -84,6 +85,10 @@ module Jekyll
 
           def jekyll_config
             @jekyll_config ||= (Jekyll.configuration({})['gitlab-letsencrypt'] || {})
+          end
+
+          def commit_message
+            jekyll_config['commit_message'] || DEFAULT_COMMIT_MESSAGE
           end
         end
       end
