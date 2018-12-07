@@ -9,5 +9,10 @@ rvm:
   - 2.5
 env:
   - JEKYLL_VERSION=3.3.1
+  - JEKYLL_VERSION=3.4.5
+  - JEKYLL_VERSION=3.5.2
+  - JEKYLL_VERSION=3.6.3
+  - JEKYLL_VERSION=3.7.4
+  - JEKYLL_VERSION=3.8.5
 before_install:
   - echo "gem \"jekyll\", \"$JEKYLL_VERSION\"" >> Gemfile
