@@ -13,5 +13,8 @@ env:
   - JEKYLL_VERSION=3.6.3
   - JEKYLL_VERSION=3.7.4
   - JEKYLL_VERSION=3.8.5
+matrix:
+  allow_failures:
+    - rvm: 2.1 # Jekyll doesn't support 2.1.x itself -> https://github.com/jekyll/jekyll/pull/6623
 before_install:
   - echo "gem \"jekyll\", \"$JEKYLL_VERSION\"" >> Gemfile
