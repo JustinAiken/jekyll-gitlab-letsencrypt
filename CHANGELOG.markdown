@@ -1,3 +1,9 @@
+# 0.4.0
+
+  - Updated travis testing matrix
+  - #21 - Add commit message configuration option
+    - Thanks to @daehlith !
+
 # 0.3.0
 
   - #17 - Check for repo id fetch request status
