@@ -117,3 +117,6 @@ MIT
 - :heart: Gitlab for free page hosting, free repos, and free CI!
 - :heart: the Jekyll team for the easy-to-use blogging engine!
 - Inspired by the excellent [gitlab-letsencrypt](https://github.com/rolodato/gitlab-letsencrypt) npm package.
+- Thanks to contributors:
+  - @ethernet-zero
+  - @daehlith
