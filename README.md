@@ -25,7 +25,9 @@ You must have:
 
 Versions supported:
 - Jekyll 3+
+  - 3.3.x - 3.8.x is tested against
 - Ruby 2.1+
+  - Although 2.2+ recommend, as Jekyll itself doesn't support 2.1
 
 ### Installation
 
