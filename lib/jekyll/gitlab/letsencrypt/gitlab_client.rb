@@ -7,7 +7,7 @@ module Jekyll
 
         attr_accessor :content
 
-        delegate :filename, :personal_access_token, :gitlab_url, :gitlab_repo, :branch, :domain, to: Configuration
+        delegate :filename, :personal_access_token, :gitlab_url, :gitlab_repo, :branch, :domain, :commit_message, to: Configuration
 
         def commit!(content)
           @content = content
@@ -43,7 +43,7 @@ module Jekyll
           connection.run_request(request_method_for_commit, nil, nil, nil) do |req|
             req.url        "projects/#{repo_id}/repository/files/#{enc_filename}"
             req.body = {
-              commit_message: "Automated Let's Encrypt renewal",
+              commit_message: commit_message,
               branch:         branch,
               content:        content
             }.to_json

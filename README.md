@@ -74,6 +74,7 @@ gitlab-letsencrypt:
   branch:    'master'            # Defaults to master, but you can use a different branch
   layout:    'null'              # Layout to use for challenge file - defaults to null, but you can change if needed
   scheme:    'https'             # Scheme to use for challenge request; default http
+  commit_message: 'Renew certificate [ROBOT]'  # Commit message to use; defaults to "Automated Let's Encrypt renewal"
 ```
 
 ### Running

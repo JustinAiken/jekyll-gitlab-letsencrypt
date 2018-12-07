@@ -71,4 +71,16 @@ describe Jekyll::Gitlab::Letsencrypt::Configuration do
       it { should eq 'https://gitlab'}
     end
   end
+
+  describe '#commit_message' do
+    subject { described_class.commit_message }
+    context "with no commit_message" do
+      it { should eq 'Automated Let\'s Encrypt renewal' }
+    end
+
+    context "with a commit_message" do
+      let(:plugin_config) { {'commit_message' => "Renew Let's Encrypt Certificate" } }
+      it { should eq "Renew Let's Encrypt Certificate" } 
+    end
+  end
 end
