@@ -1,7 +1,13 @@
 sudo: false
 language: ruby
+cache: bundler
 rvm:
   - 2.1
-  - 2.2.0
-  - 2.3.3
-before_install: gem install bundler --pre
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.5
+env:
+  - JEKYLL_VERSION=3.3.1
+before_install:
+  - echo "gem \"jekyll\", \"$JEKYLL_VERSION\"" >> Gemfile
