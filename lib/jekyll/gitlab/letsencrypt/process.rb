@@ -12,7 +12,7 @@ module Jekyll
           self.new(client).process!
         end
 
-        delegate :base_path, :gitlab_url, :gitlab_repo, :pretty_url?, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
+        delegate :base_path, :gitlab_url, :gitlab_repo, :pretty_url?, :append_str, :layout, :domain, :initial_delay, :delay_time, :scheme, to: Configuration
 
         def initialize(client)
           @client = client
@@ -107,6 +107,7 @@ module Jekyll
           permalink += base_path if base_path
           permalink += challenge.filename
           permalink += "/" if pretty_url?
+          permalink += append_str
 
           content  = "---\n"
           content += "layout: #{layout}\n"

@@ -43,6 +43,10 @@ module Jekyll
             !!jekyll_config['pretty_url']
           end
 
+          def append_str
+            jekyll_config['append_str'] || ''
+          end
+
           def layout
             jekyll_config['layout'] || DEFAULT_LAYOUT
           end
