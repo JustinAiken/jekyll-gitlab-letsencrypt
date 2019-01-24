@@ -1,3 +1,6 @@
+# 0.4.1
+  - #23 - Add option to append arbitrary text to the challenge file
+
 # 0.4.0
 
   - Updated travis testing matrix
