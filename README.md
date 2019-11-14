@@ -1,3 +1,9 @@
+# Deprecated
+
+- This gem uses the letsencypt ACME v1 API, which is now deprecated.  A change to use the v2 API would be need to make it work. 
+- It's probably not needed - gitlab now offers [automatic Letsencrypt integration](https://gitlab.com/help/user/project/pages/custom_domains_ssl_tls_certification/lets_encrypt_integration.md) 
+  - I switched my own page to ^^ from this gem and it worked okay...
+ 
 [![Gem Version](http://img.shields.io/gem/v/jekyll-gitlab-letsencrypt.svg)](https://rubygems.org/gems/jekyll-gitlab-letsencrypt) [![Build Status](http://img.shields.io/travis/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](http://travis-ci.org/JustinAiken/jekyll-gitlab-letsencrypt) [![Coveralls branch](http://img.shields.io/coveralls/JustinAiken/jekyll-gitlab-letsencrypt/master.svg)](https://coveralls.io/r/JustinAiken/jjekyll-gitlab-letsencrypt?branch=master) [![Code Climate](http://img.shields.io/codeclimate/github/JustinAiken/jekyll-gitlab-letsencrypt.svg)](https://codeclimate.com/github/JustinAiken/jekyll-gitlab-letsencrypt)
 
 # jekyll-gitlab-letsencrypt
